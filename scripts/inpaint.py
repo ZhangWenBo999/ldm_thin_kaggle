@@ -104,7 +104,7 @@ if __name__ == "__main__":
     images = [x.replace("_mask.png", ".png") for x in masks]
     print(f"Found {len(masks)} inputs.")
 
-    config = OmegaConf.load("../models/ldm/inpainting_big/config_256.yaml")
+    config = OmegaConf.load("/kaggle/working/ldm_thin_kaggle/models/ldm/inpainting_big/config_256.yaml")
     model = instantiate_from_config(config.model)
     model.load_state_dict(torch.load("/kaggle/input/ldm-thin-train2-last/last.ckpt")["state_dict"],
                           strict=False)
