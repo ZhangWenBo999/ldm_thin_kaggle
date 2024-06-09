@@ -37,8 +37,8 @@ data:
 #    batch_size: 8
 #    num_workers: 12
 
-    batch_size: 4
-    num_workers: 4
+    batch_size: 3
+    num_workers: 3
     wrap: true
     train:
       target: taming-transformers-master.taming.data.custom.CustomTrain
